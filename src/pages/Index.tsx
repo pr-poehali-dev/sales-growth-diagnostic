@@ -40,37 +40,48 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center animate-slide-up">
-            <div className="inline-block mb-6 px-6 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-              <span className="text-primary font-semibold">🚀 Рост продаж до +150%</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div className="animate-slide-up">
+              <div className="inline-block mb-6 px-6 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
+                <span className="text-primary font-semibold">🚀 Рост продаж до +150%</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-secondary via-purple-600 to-primary bg-clip-text text-transparent">
+                Диагностика точки роста продаж
+              </h1>
+              
+              <p className="text-xl md:text-2xl mb-4 text-gray-700 font-light">
+                Узнайте, где ваш бизнес теряет прибыль — и как вырасти до +150%
+              </p>
+              
+              <p className="text-base md:text-lg mb-10 text-gray-600 leading-relaxed">
+                Индивидуальная встреча с экспертом, на которой вы получите оценку потенциала роста оборота и прибыли в рублях и рекомендации, что конкретно нужно изменить, чтобы расти быстрее.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <Button 
+                  onClick={scrollToForm}
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white font-semibold text-lg px-10 py-7 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+                >
+                  <span className="mr-2">✨</span>
+                  Записаться на диагностику
+                </Button>
+              </div>
+              
+              <div className="mt-8 flex items-center gap-2 text-gray-600">
+                <Icon name="Clock" size={18} className="text-primary" />
+                <span className="text-sm">60–90 минут онлайн в Zoom</span>
+              </div>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight bg-gradient-to-r from-secondary via-purple-600 to-primary bg-clip-text text-transparent">
-              Диагностика точки роста продаж
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-4 text-gray-700 font-light max-w-3xl mx-auto">
-              Узнайте, где ваш бизнес теряет прибыль — и как вырасти до +150%
-            </p>
-            
-            <p className="text-base md:text-lg mb-10 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Индивидуальная встреча с экспертом, на которой вы получите оценку потенциала роста оборота и прибыли в рублях и рекомендации, что конкретно нужно изменить, чтобы расти быстрее.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                onClick={scrollToForm}
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white font-semibold text-lg px-10 py-7 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
-              >
-                <span className="mr-2">✨</span>
-                Записаться на диагностику
-              </Button>
-            </div>
-            
-            <div className="mt-8 flex items-center justify-center gap-2 text-gray-600">
-              <Icon name="Clock" size={18} className="text-primary" />
-              <span className="text-sm">60–90 минут онлайн в Zoom</span>
+            <div className="relative animate-slide-up hidden lg:block" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
+              <img 
+                src="https://cdn.poehali.dev/projects/bf91508c-adef-476d-b12b-28d5c7bb2c7a/files/e4096da4-0084-4a71-aeea-7974b607bef9.jpg" 
+                alt="Рост продаж и аналитика" 
+                className="relative rounded-3xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
